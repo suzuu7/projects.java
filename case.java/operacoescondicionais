@@ -1,31 +1,45 @@
 import java.util.Scanner;
 
-public class operaçoescondicionais {
+public class Calculadora {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-       
-        System.out.println("Digite o primeiro número:");
-        double num1 = scanner.nextDouble();
-       
-        System.out.println("Digite o segundo número:");
-        double num2 = scanner.nextDouble();
-       
-        double resultado;
-       
-        if (num2 > num1) {
-            resultado = num1 + num2;
-            System.out.println("Segundo número maior que o primeiro - SOMA");
-            System.out.println(num1 + " + " + num2 + " = " + resultado);
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        double n1 = sc.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double n2 = sc.nextDouble();
+
+        System.out.println("Escolha a operação:");
+        System.out.println("1 - Soma");
+        System.out.println("2 - Subtração");
+        System.out.println("3 - Divisão");
+        System.out.println("4 - Multiplicação");
+
+        int op = sc.nextInt();
+
+        switch (op) {
+            case 1:
+                System.out.println("Resultado: " + (n1 + n2));
+                break;
+            case 2:
+                System.out.println("Resultado: " + (n1 - n2));
+                break;
+            case 3:
+                if (n2 != 0) {
+                    System.out.println("Resultado: " + (n1 / n2));
+                } else {
+                    System.out.println("Não pode dividir por zero");
+                }
+                break;
+            case 4:
+                System.out.println("Resultado: " + (n1 * n2));
+                break;
+            default:
+                System.out.println("Opção inválida");
         }
-        else if (num1 < num2) {
-            resultado = num1 - num2;
-            System.out.println("Primeiro número menor que o segundo - SUBTRAÇÃO");
-            System.out.println(num1 + " - " + num2 + " = " + resultado);
-        }
-        else {
-            System.out.println("Os números são iguais: " + num1 + " = " + num2);
-        }
-       
-        scanner.close();
+
+        sc.close();
     }
 }
