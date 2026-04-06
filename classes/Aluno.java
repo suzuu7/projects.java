@@ -2,6 +2,21 @@ class Aluno {
 
     String nome;
     int idade;
+
+    void apresentacao() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+    }
+
+    void saudacao() {
+        System.out.println("Olá aluno!");
+    }
+}
+
+class Aluno {
+
+    String nome;
+    int idade;
     String dtNascimento;
     String telefone;
     String nomeResponsavel;
