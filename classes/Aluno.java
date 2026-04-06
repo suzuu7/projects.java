@@ -1,45 +1,35 @@
-class Aluno {
+import java.time.LocalTime;
 
-    String nome;
-    int idade;
-
-    void apresentacao() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-    }
-
-    void saudacao() {
-        System.out.println("Olá aluno!");
-    }
+public class Aluno{
+    private String nome;
+    private int idade;
+    private String dtNascimento;
+    private String telefone;
+    private String nomeResponsavel;
+    
+        public Aluno(String nome, int idade, String dtNascimento, String telefone, String nomeResponsavel){
+    
+            this.nome = nome;
+            this.idade = idade;
+            this.dtNascimento = dtNascimento;
+            this.telefone = telefone;
+            this.nomeResponsavel = nomeResponsavel;
 }
+    public String apresentacao(){
 
-class Aluno {
-
-    String nome;
-    int idade;
-    String dtNascimento;
-    String telefone;
-    String nomeResponsavel;
-
-    void apresentacao() {
-
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("Data de nascimento: " + dtNascimento);
-        System.out.println("Telefone: " + telefone);
-        System.out.println("Responsável: " + nomeResponsavel);
+        return "nome:" + this.nome + "idade:" + this.idade + "dtNascimento:" + this.dtNascimento + "telefone:" + this.telefone + "nomeResponsavel:" + this.nomeResponsavel;
     }
 
-    void saudacao() {
+    public String saudacao(){
 
         int hora = java.time.LocalTime.now().getHour();
 
-        if (hora < 12) {
-            System.out.println("Bom dia!");
-        } else if (hora < 18) {
-            System.out.println("Boa tarde!");
+        if (hora < 12){
+          return "Bom dia!";
+        } else if (hora < 18){
+           return "Boa tarde!";
         } else {
-            System.out.println("Boa noite!");
+            return "Boa noite!";
         }
     }
 }
