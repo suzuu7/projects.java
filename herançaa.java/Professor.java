@@ -1,5 +1,3 @@
-// PROFESSOR
-
 public class Professor extends Aluno {
 
     private String titulo;
