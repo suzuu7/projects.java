@@ -1,5 +1,3 @@
-// RESPONSAVEL
-
 public class Responsavel extends Pessoa {
 
     private Aluno[] alunos;
