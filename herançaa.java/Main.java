@@ -1,5 +1,3 @@
-// MAIN COM SWING
-
 import javax.swing.JOptionPane;
 
 public class Main {
